@@ -10482,3 +10482,12 @@ textarea.form-control {
   width: 24px; /* Set your desired width */
   height: 24px; /* Set your desired height */
 }
+
+/*Home page about section*/
+@media (max-width: 767px) {
+  .homeabout {
+      background-color: rgba(0, 0, 255, 0.2);
+      padding: 10px;
+      color:white;
+  }
+}
