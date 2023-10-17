@@ -8671,7 +8671,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
       font-size: 14px;
       color: white; }
       .top-wrap .con p span.fa {
-        color: #4f86f9; }
+        color: white; }
   .top-wrap .btn-custom {
     text-transform: uppercase;
     font-size: 13px;
@@ -8727,7 +8727,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
   padding: 0; }
   @media (max-width: 991.98px) {
     .ftco-navbar-light {
-      background: #052c43 !important;
+      background: white !important;
       padding: 1em 0;
       position: relative;
       top: 0; } }
@@ -8774,17 +8774,19 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
         padding-right: 10px;
         padding-bottom: 1rem;
         padding-top: 0;
-        color: #fff; } }
+        color: black; } }
     .ftco-navbar-light .navbar-nav > .nav-item > .nav-link.active {
-      color: #4f86f9;
+      color: black;/*ACTIVE; To make the navbar link a diferrent colur*/
+      font-weight: bold;
       position: relative;
       z-index: 0; }
       @media (max-width: 991.98px) {
         .ftco-navbar-light .navbar-nav > .nav-item > .nav-link.active {
-          color: #fff !important; } }
+          color: black !important;
+          font-weight: bold; } }
   .ftco-navbar-light .navbar-toggler {
     border: none;
-    color: rgba(255, 255, 255, 0.9) !important;
+    color: black !important;
     cursor: pointer;
     padding-right: 0;
     text-transform: uppercase;
@@ -8940,7 +8942,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
         bottom: 0;
         content: '';
         z-index: -1;
-        background: #052c43;
+        background: grey;
         opacity: 0.5; /*Alter this to 0.5 for an overlay background image*/
         width: 100%; }
         @media (max-width: 575.98px) {
@@ -8995,7 +8997,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
   .slider-hero .tns-outer [aria-controls], .slider-hero .tns-outer [data-action] {
     cursor: pointer; }
   .slider-hero .tns-nav > .tns-nav-active {
-    background: #4f86f9;
+    background: grey;
     width: 10px; }
 
 .bg-light {
@@ -9031,8 +9033,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
   .btn:hover, .btn:active, .btn:focus {
     outline: none; }
   .btn.btn-primary {
-    background: #4f86f9 !important;
-    border: 1px solid #4f86f9 !important;
+    background: black !important;
+    border: 1px solid black !important;
     color: #fff !important; }
     .btn.btn-primary span {
       color: #fff !important; }
@@ -9069,7 +9071,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
   .btn.btn-white {
     background: #fff !important;
     border: 3px solid #ccc !important; /* Light grey border */
-    color: #4f86f9 !important;
+    color: black !important;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);} /* White box shadow */
   .btn.btn-white:hover {
     background-color: #4f86f9 !important; /* Change background color on hover */
@@ -9338,7 +9340,7 @@ textarea.form-control {
 .ftco-image .icon {
   width: 80px;
   height: 80px;
-  background: #4f86f9;
+  background: black;
   border-radius: 50%;
   position: relative;
   -webkit-animation: pulse 2s infinite;
@@ -9792,7 +9794,7 @@ textarea.form-control {
       border-radius: 4px;
       position: relative;
       background: rgba(255, 255, 255, 0.2);
-      background: #4f86f9; }
+      background: grey; }
       .ftco-footer-social li a span {
         position: absolute;
         font-size: 17px;
@@ -9814,33 +9816,34 @@ textarea.form-control {
 
       @-webkit-keyframes pulse {
         0% {
-          -webkit-box-shadow: 0 0 0 0 rgba(79, 134, 249, 0.4);
+          -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); /* Use white color with opacity */
         }
         70% {
-          -webkit-box-shadow: 0 0 0 30px rgba(79, 134, 249, 0);
+          -webkit-box-shadow: 0 0 0 30px rgba(255, 255, 255, 0);
         }
         100% {
-          -webkit-box-shadow: 0 0 0 0 rgba(79, 134, 249, 0);
+          -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
         }
       }
       
       @keyframes pulse {
         0% {
-          -moz-box-shadow: 0 0 0 0 rgba(79, 134, 249, 0.4);
-          -webkit-box-shadow: 0 0 0 0 rgba(79, 134, 249, 1); /* Adjust opacity here for a darker shadow */
-          box-shadow: 0 0 0 0 rgba(79, 134, 249, 1); /* Adjust opacity here for a darker shadow */
+          -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+          -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 1); /* Use white color with opacity */
+          box-shadow: 0 0 0 0 rgba(255, 255, 255, 1); /* Use white color with opacity */
         }
         70% {
-          -moz-box-shadow: 0 0 0 30px rgba(79, 134, 249, 0);
-          -webkit-box-shadow: 0 0 0 30px rgba(79, 134, 249, 0);
-          box-shadow: 0 0 0 30px rgba(79, 134, 249, 0);
+          -moz-box-shadow: 0 0 0 30px rgba(255, 255, 255, 0);
+          -webkit-box-shadow: 0 0 0 30px rgba(255, 255, 255, 0);
+          box-shadow: 0 0 0 30px rgba(255, 255, 255, 0);
         }
         100% {
-          -moz-box-shadow: 0 0 0 0 rgba(79, 134, 249, 0);
-          -webkit-box-shadow: 0 0 0 0 rgba(79, 134, 249, 0);
-          box-shadow: 0 0 0 0 rgba(79, 134, 249, 0);
+          -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+          -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+          box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
         }
       }
+      
       
 
 .heading-section .subheading {
@@ -9903,14 +9906,14 @@ textarea.form-control {
   .testimony-section .tns-outer [aria-controls], .testimony-section .tns-outer [data-action] {
     cursor: pointer; }
   .testimony-section .tns-nav > .tns-nav-active {
-    background: #4f86f9; }
+    background: black; }
   .testimony-section .tns-item:not(.tns-slide-active) + .tns-slide-active + .tns-slide-active .testimony-wrap {
-    background: #4f86f9;
+    background: grey;
     color: rgba(255, 255, 255, 0.9); }
     .testimony-section .tns-item:not(.tns-slide-active) + .tns-slide-active + .tns-slide-active .testimony-wrap .icon {
-      background: #f9faff; }
+      background: white; }
       .testimony-section .tns-item:not(.tns-slide-active) + .tns-slide-active + .tns-slide-active .testimony-wrap .icon span {
-        color: #4f86f9; }
+        color: grey; }
     .testimony-section .tns-item:not(.tns-slide-active) + .tns-slide-active + .tns-slide-active .testimony-wrap .name, .testimony-section .tns-item:not(.tns-slide-active) + .tns-slide-active + .tns-slide-active .testimony-wrap .position {
       color: #fff; }
 
@@ -9930,7 +9933,7 @@ textarea.form-control {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: #4f86f9; }
+    background: grey; }
     .testimony-wrap .icon span {
       color: #fff; }
   .testimony-wrap .user-img {
@@ -9942,7 +9945,7 @@ textarea.form-control {
     font-weight: 500;
     font-size: 20px;
     margin-bottom: 0;
-    color: #4f86f9; }
+    color: grey; }
   .testimony-wrap .position {
     font-size: 16px;
     color: #4d4d4d; }
@@ -10057,7 +10060,7 @@ textarea.form-control {
       -ms-transition: all 0.3s ease;
       transition: all 0.3s ease; }
     .staff .text .position {
-      color: #4f86f9;
+      color: black;
       display: block;
       font-weight: 500;
       text-transform: uppercase;
@@ -10077,11 +10080,11 @@ textarea.form-control {
     .staff .ftco-social li a {
       width: 34px;
       height: 34px;
-      background: #4f86f9;
+      background: grey;
       color: #fff;
       border-radius: 50%; }
   .staff:hover .text, .staff:focus .text {
-    background: #4f86f9;
+    background: grey;
     color: rgba(255, 255, 255, 0.8); }
     .staff:hover .text h3, .staff:hover .text .h3, .staff:focus .text h3, .staff:focus .text .h3 {
       color: #fff; }
@@ -10486,8 +10489,38 @@ textarea.form-control {
 /*Home page about section*/
 @media (max-width: 767px) {
   .homeabout {
-      background-color: rgba(0, 0, 255, 0.2);
-      padding: 10px;
-      color:white;
+    background-color: rgba(0, 0, 0, 0.2);      
+    padding: 10px;
+    color:white;
   }
+}
+
+/* Style the loading screen */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 1s ease-in-out; /* Control the fade-in duration */
+}
+
+/* Style the loader (your logo) */
+.loader {
+  /* Add your logo as the background-image */
+  background-image: url('../images/logo-crown.png');
+  border: solid white;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.5);  
+  border-radius: 20px;
+  width: 100px; /* Adjust the width and height according to your logo */
+  height: 100px;
+  background-size: cover;
+  transition: opacity 1s ease-in-out; /* Control the fade-in duration */
+  opacity: 0;
 }
