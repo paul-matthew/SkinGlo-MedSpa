@@ -10524,3 +10524,10 @@ textarea.form-control {
   transition: opacity 1s ease-in-out; /* Control the fade-in duration */
   opacity: 0;
 }
+
+/* Grayscale effect for the background image */
+.bw-effect {
+  filter: grayscale(100%);
+}
+
+
