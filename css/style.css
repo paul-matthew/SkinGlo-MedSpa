@@ -986,6 +986,7 @@ progress {
     flex: 0 0 auto;
     width: 66.66667%; }
   .col-md-9 {
+    z-index:1;
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
@@ -3666,7 +3667,7 @@ textarea.form-control-lg {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 3px solid black;
   border-radius: 0.25rem; }
   .card > hr {
     margin-right: 0;
@@ -3690,10 +3691,17 @@ textarea.form-control-lg {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  padding: 1rem 1rem; }
+  padding: 1rem 1rem;
+  background-color:black; }
 
 .card-title {
   margin-bottom: 0.5rem;
+  color:white;
+}
+
+.price {
+  color:white;
+  font-weight: bold;
 }
 
 .card-subtitle {
@@ -8992,12 +9000,12 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
     padding: 0;
     margin: 0 5px;
     border-radius: 50%;
-    background: #ddd;
+    background: white;
     border: 0; }
   .slider-hero .tns-outer [aria-controls], .slider-hero .tns-outer [data-action] {
     cursor: pointer; }
   .slider-hero .tns-nav > .tns-nav-active {
-    background: grey;
+    background: lightblue;
     width: 10px; }
 
 .bg-light {
@@ -9858,7 +9866,8 @@ textarea.form-control {
 .heading-section h2, .heading-section .h2 {
   font-size: 38px;
   font-weight: 500;
-  line-height: 1.4; }
+  line-height: 1.4;
+ }
   @media (max-width: 991.98px) {
     .heading-section h2, .heading-section .h2 {
       font-size: 40px; } }
@@ -9906,9 +9915,9 @@ textarea.form-control {
   .testimony-section .tns-outer [aria-controls], .testimony-section .tns-outer [data-action] {
     cursor: pointer; }
   .testimony-section .tns-nav > .tns-nav-active {
-    background: black; }
+    background: lightblue; }
   .testimony-section .tns-item:not(.tns-slide-active) + .tns-slide-active + .tns-slide-active .testimony-wrap {
-    background: grey;
+    background: lightblue;
     color: rgba(255, 255, 255, 0.9); }
     .testimony-section .tns-item:not(.tns-slide-active) + .tns-slide-active + .tns-slide-active .testimony-wrap .icon {
       background: white; }
@@ -10528,6 +10537,60 @@ textarea.form-control {
 /* Grayscale effect for the background image */
 .bw-effect {
   filter: grayscale(100%);
+  position: relative; /* Add position relative to enable absolute positioning for pseudo-element */
 }
+
+.bw-effect::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 1.0); /* Semi-transparent black overlay */
+  opacity: 0.7; /* Adjust the opacity as needed */
+  z-index: 1; /* Ensure the overlay is on top of the content */
+}
+
+/*SERVICES SEARCH BAR*/
+
+.search-container {
+  text-align: center;
+  margin-top: 20px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+#serviceSearch {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.suggestion-list {
+  list-style: none; /* Remove bullets */
+  padding: 0;
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-height: 150px;
+  overflow-y: auto;
+  display: none; /* Initially hide the suggestions */
+  z-index:1;
+  width:300px;
+}
+
+.suggestion-list li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestion-list li:hover {
+  background-color: #f5f5f5;
+}
+
 
 

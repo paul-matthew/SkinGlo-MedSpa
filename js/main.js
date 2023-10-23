@@ -270,3 +270,88 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 2000); // Adjust the duration to match your desired 3-second loading animation
   }
 });
+
+//SERVICE SEARCH BAR
+
+document.addEventListener("DOMContentLoaded", function() {
+	// Check if the script should run on the services.html page
+	if (window.location.pathname.endsWith("/services.html")) {
+	  const services = [
+		"Lifting Code Luxury Facial",
+		"The OxyGeneo Super Facial",
+		"Casmara Express Facial",
+		"Back Facial",
+		"Men's Facial",
+		"Hot Stone Massage",
+		"Herbal B Peel (Beauty Peel)",
+		"Herbal B Peel + Facial",
+		"Skin Tags Removal Consultation",
+		"C (Corrective Peel) + Follow up Facial"
+		// Add more services as needed
+	  ];
+  
+	  const serviceSearchInput = document.getElementById("serviceSearch");
+	  const suggestionList = document.getElementById("suggestionList");
+	  const serviceCardContainer = document.getElementById("serviceCardContainer");
+	  const allServiceCards = document.querySelectorAll(".card-container");
+  
+	  // Add event listener to hide dropdown when clicking outside the search bar
+	  document.addEventListener("click", function(event) {
+		if (event.target !== serviceSearchInput) {
+		  suggestionList.style.display = "none";
+		}
+	  });
+  
+	  // Add event listener to hide dropdown when pressing the Escape key
+	  document.addEventListener("keydown", function(event) {
+		if (event.key === "Escape") {
+		  suggestionList.style.display = "none";
+		}
+	  });
+  
+	  serviceSearchInput.addEventListener("input", function() {
+		const inputValue = serviceSearchInput.value.toLowerCase();
+		suggestionList.innerHTML = "";
+  
+		const matchingServices = services.filter(service =>
+		  service.toLowerCase().includes(inputValue)
+		);
+  
+		allServiceCards.forEach(card => {
+		  const cardTitle = card.querySelector(".card-title").textContent.toLowerCase();
+		  if (matchingServices.some(service => cardTitle.includes(service.toLowerCase()))) {
+			card.style.display = "block";
+		  } else {
+			card.style.display = "none";
+		  }
+		});
+  
+		matchingServices.forEach(service => {
+		  const listItem = document.createElement("li");
+		  listItem.textContent = service;
+		  listItem.addEventListener("click", function() {
+			serviceSearchInput.value = service;
+			suggestionList.style.display = "none"; // Hide dropdown when a suggestion is clicked
+			showServiceCard(service);
+		  });
+		  suggestionList.appendChild(listItem);
+		});
+  
+		if (matchingServices.length > 0) {
+		  suggestionList.style.display = "block";
+		} else {
+		  suggestionList.style.display = "none";
+		}
+	  });
+  
+	  function showServiceCard(serviceName) {
+		const serviceCard = document.getElementById(`serviceitem${services.indexOf(serviceName) + 1}`);
+		if (serviceCard) {
+		  serviceCardContainer.innerHTML = "";
+		  serviceCardContainer.appendChild(serviceCard);
+		  serviceCardContainer.style.display = "block";
+		}
+	  }
+	}
+  });
+  
