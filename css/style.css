@@ -3384,7 +3384,10 @@ textarea.form-control-lg {
   font-size: 1.25rem;
   text-decoration: none;
   white-space: nowrap; }
-
+.navbar-brand img { /*To change banner logo size*/
+  height:8vh;
+  padding-left: 5px;
+}
 .navbar-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3650,7 +3653,7 @@ textarea.form-control-lg {
     color: #fff; }
 
 .card-container{
-  max-height:30%;
+  max-height:45vh;
 }
 
 .card {
@@ -3663,6 +3666,7 @@ textarea.form-control-lg {
   -ms-flex-direction: column;
   flex-direction: column;
   min-width: 0;
+  max-height:35vh;
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
@@ -3691,16 +3695,18 @@ textarea.form-control-lg {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   padding: 1rem 1rem;
-  background-color:black; }
+  background-color:white; }
 
 .card-title {
   margin-bottom: 0.5rem;
-  color:white;
+  color:black;
 }
 
 .price {
-  color:white;
+  color:black;
+  display:block;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .card-subtitle {
@@ -8849,22 +8855,27 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
     z-index: -1; }
   .hero-wrap.hero-wrap-2 {
     min-height: auto;
-    height: 500px;
+    height: 250px;
     background-position: center center;
-    background-attachment: fixed; }
+    background-attachment: fixed;
+  }
     .hero-wrap.hero-wrap-2 .overlay {
-      opacity: .5; }
+      opacity: .5;
+     }
     .hero-wrap.hero-wrap-2 .slider-text {
       min-height: auto;
-      height: 500px; }
+      height: 500px;
+     }
   .hero-wrap .slider-text {
     height: 100vh;
     min-height: 750px;
     color: rgba(255, 255, 255, 0.8);
-    z-index: 3; }
+    z-index: 3;
+   }
     .hero-wrap .slider-text .text {
       position: relative;
-      z-index: 0; }
+      z-index: 0;
+     }
     .hero-wrap .slider-text .subheading {
       text-transform: uppercase;
       font-weight: 700;
@@ -8892,7 +8903,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
         margin-bottom: 5px; } }
     .hero-wrap .slider-text .breadcrumbs {
       font-size: 14px;
-      margin-bottom: 10px;
+      margin-top: 80px;
       z-index: 99;
       font-weight: 600;
       text-transform: uppercase;
@@ -9245,7 +9256,7 @@ textarea.form-control {
       font-weight: 500;
       margin-bottom: 15px; }
   .services:hover, .services.active, .services.active-2 {
-    background: #333333; /*UPDATED BASED ON CLIENT COLOURS; original: #4f86f9*/
+    background: black; /*UPDATED BASED ON CLIENT COLOURS; original: #4f86f9*/
     -webkit-box-shadow: 0px 5px 25px -2px rgba(0, 0, 0, 0.18);
     -moz-box-shadow: 0px 5px 25px -2px rgba(0, 0, 0, 0.18);
     box-shadow: 0px 5px 25px -2px rgba(0, 0, 0, 0.18); }
@@ -9580,6 +9591,7 @@ textarea.form-control {
     font-weight: 400; }
 
 .ftco-section {
+  background-color: white;
   padding: 8em 0;
   position: relative;
   width: 100%;
@@ -9708,8 +9720,8 @@ textarea.form-control {
     .ftco-footer .logo a small, .ftco-footer .logo a .small {
       font-size: 24px;
       color: #4f86f9; }
-  .ftco-footer .ftco-footer-widget h2, .ftco-footer .ftco-footer-widget .h2 {
-    color: #fff;
+  .ftco-footer .ftco-footer-widget h2, .ftco-footer .ftco-footer-widget .h2,  .ftco-footer .ftco-footer-widget p {
+    color: black;
     margin-bottom: 40px;
     font-size: 18px;
     font-weight: 500;
@@ -9719,10 +9731,10 @@ textarea.form-control {
     position: relative;
     padding-left: 20px; }
     .ftco-footer .ftco-footer-widget ul.list-unstyled li a {
-      color: rgba(255, 255, 255, 0.8); }
+      color: black; }
       .ftco-footer .ftco-footer-widget ul.list-unstyled li a span.ion {
         font-size: 14px;
-        color: #fff;
+        color: black;
         position: absolute;
         top: 5px;
         left: 0; }
@@ -9740,7 +9752,8 @@ textarea.form-control {
     padding: 0; }
     .ftco-footer .block-23 ul li {
       font-size: 15px;
-      padding-left: 0; }
+      padding-left: 0;
+      color:black }
       .ftco-footer .block-23 ul li, .ftco-footer .block-23 ul li > a {
         display: table;
         line-height: 1.5;
@@ -9752,12 +9765,12 @@ textarea.form-control {
       .ftco-footer .block-23 ul li .icon, .ftco-footer .block-23 ul li .text {
         display: table-cell;
         vertical-align: top;
-        color: rgba(255, 255, 255, 0.9) !important; }
+        color: black !important; }
       .ftco-footer .block-23 ul li .icon {
         width: 40px;
         font-size: 15px;
         padding-top: 2px;
-        color: #fff !important; }
+        color: black !important; }
   .ftco-footer .bg-darken p a {
     color: #fff; }
   .ftco-footer .block-21 .blog-img {
@@ -9802,7 +9815,7 @@ textarea.form-control {
       border-radius: 4px;
       position: relative;
       background: rgba(255, 255, 255, 0.2);
-      background: grey; }
+      background: black; }
       .ftco-footer-social li a span {
         position: absolute;
         font-size: 17px;
@@ -10212,7 +10225,8 @@ textarea.form-control {
       color: #000000; }
 
 .contact-wrap {
-  background: #fff; }
+  background: #fff;
+  border:solid whitesmoke; }
   .contact-wrap h3, .contact-wrap .h3 {
     color: #000000;
     font-weight: 400;
@@ -10559,6 +10573,9 @@ textarea.form-control {
   margin-top: 20px;
   max-width: 300px;
   margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 50px;
+
 }
 
 #serviceSearch {
