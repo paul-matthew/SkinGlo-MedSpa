@@ -74,8 +74,21 @@
 		    </div>
 		  </div>
 		</nav>
-    <script id="setmore_script" type="text/javascript" src="https://storage.googleapis.com/fullintegration-live/webComponentAppListing/Container/setmoreIframeLive.js"></script><a style="float:none; position: fixed; right: -2px; top: 25%; display: block; z-index: 20000" id="Setmore_button_iframe"  href="https://booking.setmore.com/scheduleappointment/35bbcd9a-2c93-4660-90df-9873ef5c488d"><img border="none" src="https://storage.googleapis.com/full-assets/setmore/images/1.0/Calendar/Setmore-Book-Now.png" alt="Book an appointment with Paul M using Setmore"/></a>          
-
+    <div id="setmoreContent" style="display: none;">
+      <script id="setmore_script" type="text/javascript" src="https://storage.googleapis.com/fullintegration-live/webComponentAppListing/Container/setmoreIframeLive.js"></script>
+      <a style="float:none; position: fixed; right: -2px; top: 25%; display: block; z-index: 20000" id="Setmore_button_iframe" href="https://booking.setmore.com/scheduleappointment/35bbcd9a-2c93-4660-90df-9873ef5c488d">
+        <img border="none" src="https://storage.googleapis.com/full-assets/setmore/images/1.0/Calendar/Setmore-Book-Now.png" alt="Book an appointment with Paul M using Setmore" />
+      </a>
+    </div>
+    
+    <script>
+      function displaySetmore() {
+        document.getElementById('setmoreContent').style.display = 'block';
+      }
+    
+      setTimeout(displaySetmore, 2500); // Display after a 3-second delay
+    </script>
+    
     <section class="slider-hero" >
       <div class="overlay"></div>
       <div class="hero-slider">
@@ -86,7 +99,7 @@
                 <div class="row d-flex justify-content-center">
                   <div class="col-md-7">
                     <div class="text text-center mt-lg-5" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%;">
-                      <p><a href="#about-us-brief" style="margin-bottom: 260px;"class="btn btn-white p-2 px-4">Why Choose Us<span class="ion-ios-arrow-round-forward"></span></a></p>
+                      <p><a href="#about-us-brief" style="margin-bottom: 270px;font-size: large;"class="btn btn-white p-2 px-4">Why Choose Us<span class="ion-ios-arrow-round-forward"></span></a></p>
                     </div>
                   </div>
                 </div>
@@ -104,7 +117,7 @@
                         <h1 class="mb-4">Top quality treatments with outstanding results</h1>
                         <p class="mb-4">We invite you to book an appointment, we are here to guide you on your journey to wellness, relaxation and beautiful skin.</p>
                       </div> -->
-                      <p><a href="/services.html" style="margin-bottom: 260px;"class="btn btn-white p-2 px-4">Our Services <span class="ion-ios-arrow-round-forward"></span></a></p>
+                      <p><a href="/services.html" style="margin-bottom: 270px;font-size: large;"class="btn btn-white p-2 px-4">Our Services <span class="ion-ios-arrow-round-forward"></span></a></p>
                     </div>
                   </div>
                 </div>

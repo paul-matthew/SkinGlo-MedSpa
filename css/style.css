@@ -47,7 +47,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  background-color: #fff;
+  background-color: white;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
@@ -3651,6 +3651,10 @@ textarea.form-control-lg {
   .navbar-dark .navbar-text a:hover,
   .navbar-dark .navbar-text a:focus {
     color: #fff; }
+
+.center-horizontal{
+  margin:0 auto;
+}
 
 .card-container{
   max-height:45vh;
@@ -10538,12 +10542,12 @@ textarea.form-control {
 /* Style the loader (your logo) */
 .loader {
   /* Add your logo as the background-image */
-  background-image: url('../images/logo-crown.png');
-  border: solid white;
-  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.5);  
+  background-image: url('../images/logo-load.jpg');
+  /* border: solid black; */
+  /*box-shadow: 0 2px 10px rgba(255, 255, 255, 0.5);   */
   border-radius: 20px;
-  width: 100px; /* Adjust the width and height according to your logo */
-  height: 100px;
+  width: 400px; /* Adjust the width and height according to your logo */
+  height: 400px;
   background-size: cover;
   transition: opacity 1s ease-in-out; /* Control the fade-in duration */
   opacity: 0;

@@ -274,7 +274,6 @@ document.addEventListener('DOMContentLoaded', function () {
 //SERVICE SEARCH BAR
 
 document.addEventListener("DOMContentLoaded", function() {
-	// Check if the script should run on the services.html page
 	if (window.location.pathname.endsWith("/services.html")) {
 	  const services = [
 		"Lifting Code Luxury Facial",
@@ -286,23 +285,21 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Herbal B Peel (Beauty Peel)",
 		"Herbal B Peel + Facial",
 		"Skin Tags Removal Consultation",
-		"C (Corrective Peel) + Follow up Facial"
+		"C (Corrective Peel)",
+		"Celluma for Anti aging",
+		"Celluma Add-on for Acne"
 		// Add more services as needed
 	  ];
-  
 	  const serviceSearchInput = document.getElementById("serviceSearch");
 	  const suggestionList = document.getElementById("suggestionList");
-	  const serviceCardContainer = document.getElementById("serviceCardContainer");
 	  const allServiceCards = document.querySelectorAll(".card-container");
   
-	  // Add event listener to hide dropdown when clicking outside the search bar
 	  document.addEventListener("click", function(event) {
 		if (event.target !== serviceSearchInput) {
 		  suggestionList.style.display = "none";
 		}
 	  });
   
-	  // Add event listener to hide dropdown when pressing the Escape key
 	  document.addEventListener("keydown", function(event) {
 		if (event.key === "Escape") {
 		  suggestionList.style.display = "none";
@@ -318,11 +315,21 @@ document.addEventListener("DOMContentLoaded", function() {
 		);
   
 		allServiceCards.forEach(card => {
-		  const cardTitle = card.querySelector(".card-title").textContent.toLowerCase();
-		  if (matchingServices.some(service => cardTitle.includes(service.toLowerCase()))) {
-			card.style.display = "block";
+		  const cardTitleElement = card.querySelector(".card-title");
+		  if (cardTitleElement !== null) {
+			const cardTitle = cardTitleElement.textContent.toLowerCase();
+			if (
+			  inputValue === "" ||
+			  matchingServices.some(service =>
+				cardTitle.includes(service.toLowerCase())
+			  )
+			) {
+			  card.style.display = "block";
+			} else {
+			  card.style.display = "none";
+			}
 		  } else {
-			card.style.display = "none";
+			console.error("Card title element not found");
 		  }
 		});
   
@@ -331,26 +338,34 @@ document.addEventListener("DOMContentLoaded", function() {
 		  listItem.textContent = service;
 		  listItem.addEventListener("click", function() {
 			serviceSearchInput.value = service;
-			suggestionList.style.display = "none"; // Hide dropdown when a suggestion is clicked
 			showServiceCard(service);
 		  });
 		  suggestionList.appendChild(listItem);
 		});
   
-		if (matchingServices.length > 0) {
-		  suggestionList.style.display = "block";
-		} else {
-		  suggestionList.style.display = "none";
-		}
+		suggestionList.style.display = matchingServices.length > 0 ? "block" : "none";
 	  });
   
 	  function showServiceCard(serviceName) {
-		const serviceCard = document.getElementById(`serviceitem${services.indexOf(serviceName) + 1}`);
-		if (serviceCard) {
-		  serviceCardContainer.innerHTML = "";
-		  serviceCardContainer.appendChild(serviceCard);
-		  serviceCardContainer.style.display = "block";
-		}
+		const serviceCardContainer = document.getElementById("serviceCardContainer");
+		serviceCardContainer.innerHTML = ""; // Clear existing content
+  
+		allServiceCards.forEach(card => {
+		  const cardTitleElement = card.querySelector(".card-title");
+		  if (cardTitleElement !== null) {
+			const cardTitle = cardTitleElement.textContent.toLowerCase();
+			if (cardTitle.includes(serviceName.toLowerCase())) {
+			  card.style.display = "block";
+			  serviceCardContainer.appendChild(card); // Show the selected service card
+			  serviceCardContainer.style.display = "block";
+			  card.classList.add("center-horizontal"); 
+			} else {
+			  card.style.display = "none";
+			}
+		  } else {
+			console.error("Card title element not found");
+		  }
+		});
 	  }
 	}
   });
