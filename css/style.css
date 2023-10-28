@@ -8926,7 +8926,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
 
 .slider-hero {
   position: relative;
-  height: 100vh;
+  background-color: white;
+  height: 85vh;
   min-height: 100%; }
   .slider-hero .work {
     width: 100%; }
@@ -8961,14 +8962,14 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
         bottom: 0;
         content: '';
         z-index: -1;
-        background: grey;
+        background: white;
         opacity: 0.5; /*Alter this to 0.5 for an overlay background image*/
         width: 100%; }
         @media (max-width: 575.98px) {
           .slider-hero .work .img:after {
             width: 100%; } }
       .slider-hero .work .img.img2 {
-        background-position: center center; }
+        background-position: top center; }
     .slider-hero .work .text {
       color: rgba(255, 255, 255, 0.8); }
       .slider-hero .work .text h1, .slider-hero .work .text .h1 {
@@ -9011,12 +9012,12 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
     padding: 0;
     margin: 0 5px;
     border-radius: 50%;
-    background: white;
+    background: grey;
     border: 0; }
   .slider-hero .tns-outer [aria-controls], .slider-hero .tns-outer [data-action] {
     cursor: pointer; }
   .slider-hero .tns-nav > .tns-nav-active {
-    background: lightblue;
+    background: black;
     width: 10px; }
 
 .bg-light {
@@ -9088,19 +9089,19 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
         background: #3bd381 !important;
         color: #fff !important; }
   .btn.btn-white {
-    background: #fff !important;
+    background: black !important;
     border: 3px solid #ccc !important; /* Light grey border */
-    color: black !important;
+    color: white !important;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);} /* White box shadow */
   .btn.btn-white:hover {
-    background-color: #4f86f9 !important; /* Change background color on hover */
-    color: #fff !important; /* Change text color on hover */
+    background-color: white !important; /* Change background color on hover */
+    color: black !important; /* Change text color on hover */
     transform: scale(1.1); /* Add a scaling effect on hover (optional) */
   }
   .btn.btn-white:hover span{
-    color: white !important; }
+    color: black !important; }
     .btn.btn-white span {
-      color: #4f86f9 !important; }
+      color: white !important; }
     .btn.btn-white:hover {
       border: 1px solid #fff;
       background: transparent;
@@ -9709,8 +9710,8 @@ textarea.form-control {
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: .8;
-    background: #000000;
+    opacity: .9;
+    background: white;
     z-index: -1; }
   .ftco-footer .logo a {
     position: relative;
