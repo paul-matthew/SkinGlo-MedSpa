@@ -3667,6 +3667,15 @@ textarea.form-control-lg {
 .card-container{
   max-height:45vh;
 }
+@media (max-width:767px){
+  .card-container{
+    max-height:45vh;
+    max-width:50vw;
+  }
+  .card-title{
+    font-size:15px;
+  }
+}
 
 .card {
   position: relative;

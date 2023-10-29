@@ -277,7 +277,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	if (window.location.pathname.endsWith("/services.html")) {
 	  const services = [
 		"Lifting Code Luxury Facial",
-		"The OxyGeneo Super Facial",
+		"OxyGeneo Super Facial",
 		"Casmara Express Facial",
 		"Back Facial",
 		"Men's Facial",
@@ -368,5 +368,29 @@ document.addEventListener("DOMContentLoaded", function() {
 		});
 	  }
 	}
+  });
+  
+  //Lazy Load
+
+  document.addEventListener("DOMContentLoaded", function() {
+	const lazyImages = document.querySelectorAll('.lazy-load-img');
+  
+	const lazyLoad = target => {
+	  const io = new IntersectionObserver((entries, observer) => {
+		entries.forEach(entry => {
+		  if (entry.isIntersecting) {
+			const img = entry.target;
+			const src = img.getAttribute('data-src');
+			img.setAttribute('src', src);
+			img.classList.remove('lazy-load-img');
+			observer.disconnect();
+		  }
+		});
+	  });
+  
+	  io.observe(target);
+	};
+  
+	lazyImages.forEach(lazyLoad);
   });
   
