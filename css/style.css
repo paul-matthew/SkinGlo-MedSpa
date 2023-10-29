@@ -40,6 +40,9 @@
   :root {
     scroll-behavior: smooth; } }
 
+html{
+  background-color: white;
+}
 body {
   margin: 0;
   font-family: var(--bs-font-sans-serif);
@@ -47,7 +50,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  background-color: white;
+  background-color: white !important;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
@@ -3387,6 +3390,11 @@ textarea.form-control-lg {
 .navbar-brand img { /*To change banner logo size*/
   height:8vh;
   padding-left: 5px;
+}
+@media (max-width:776px){/*To make logo smaller on mobile*/
+  .navbar-brand img {
+    height:6vh;
+  }
 }
 .navbar-nav {
   display: -webkit-box;
@@ -9023,6 +9031,52 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
   .slider-hero .tns-nav > .tns-nav-active {
     background: black;
     width: 10px; }
+  .slider-hero .intro{
+    position: relative;
+    color:black;
+    display:flex;
+    justify-content: center;
+  }
+  @media (max-width:300px) {  
+    .slider-hero .intro{
+      height:50px;
+      bottom:150px;
+      font-size: medium;
+    }
+  }
+  @media (min-width:300px) {  
+    .slider-hero .intro{
+      height:50px;
+      bottom:150px;
+      font-size: larger;
+    }
+  }
+  @media (min-width:701px) {  
+    .slider-hero .intro{
+      height:50px;
+      bottom:300px;
+      font-size:xx-large;
+    }
+  }
+  @media (min-width:767px) {  
+    .slider-hero .intro{
+      height:50px;
+      bottom:420px;
+      font-size:xx-large;
+    }
+  }
+  @media (min-width:992px) {  
+    .slider-hero .intro{
+      height:50px;
+      bottom:200px;
+      font-size:xx-large;
+    }
+  }
+  @media (min-width:1279px) {  
+    .slider-hero .intro{
+      display:none
+    }
+  }
 
 .bg-light {
   background: #f4f6ff !important; }
@@ -9096,7 +9150,83 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
     background: black !important;
     border: 3px solid #ccc !important; /* Light grey border */
     color: white !important;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);} /* White box shadow */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  } /* White box shadow */
+    
+  @media (max-width:300px){
+    .btn.btn-white {
+      margin-bottom:270px !important;
+      font-size: medium !important;
+    }
+  }
+  @media (min-width:300px){
+    .btn.btn-white {
+      margin-bottom:270px !important;
+    }
+  }
+  @media (min-width:550px){
+    .btn.btn-white {
+      margin-bottom:200px !important;
+    }
+  }
+  @media (min-width:700px){
+    .btn.btn-white {
+      margin-bottom:350px !important;
+    }
+  }
+  @media (min-width:761px){
+    .btn.btn-white {
+      margin-bottom:620px !important;
+      font-size: xx-large !important;
+    }
+  }
+  @media (min-width: 1000px) {
+    @media (max-height: 700px) {
+      .btn.btn-white {
+        display: none;
+      }
+    }
+  }
+  @media (min-width: 1200px) {
+    @media (max-height: 801px) {
+      .btn.btn-white {
+        margin-bottom:260px !important;
+      }
+    }
+  }
+  @media (min-width: 1200px) {
+    @media (min-height: 801px) {
+      .btn.btn-white {
+        margin-bottom:200px !important;
+      }
+    }
+  }
+
+  /* @media (min-width:870px){
+    .btn.btn-white {
+      margin-bottom:280px !important;
+    }
+  }
+  @media (min-width:1079px){
+    .btn.btn-white {
+      margin-bottom:240px !important;
+    }
+  }
+  @media (min-width:1208px){
+    .btn.btn-white {
+      margin-bottom:230px !important;
+    }
+  }
+  @media (min-width:1393px){
+    .btn.btn-white {
+      margin-bottom:150px !important;
+    }
+  } */
+  @media (min-width:1706px){
+    .btn.btn-white {
+      display:none;
+    }
+  }
   .btn.btn-white:hover {
     background-color: white !important; /* Change background color on hover */
     color: black !important; /* Change text color on hover */
