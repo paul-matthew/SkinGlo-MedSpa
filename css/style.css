@@ -9072,9 +9072,22 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
       font-size:xx-large;
     }
   }
-  @media (min-width:1279px) {  
-    .slider-hero .intro{
-      display:none
+  @media (min-width: 1200px) {
+    @media (max-height: 801px) {
+      .slider-hero .intro{
+        height:50px;
+        bottom:220px;
+        font-size:xx-large;
+      }
+    }
+  }
+
+
+  @media (min-width: 1200px) {
+    @media (min-height: 801px) {
+      .slider-hero .intro{
+        display:none;
+      }
     }
   }
 
@@ -9191,6 +9204,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
     @media (max-height: 801px) {
       .btn.btn-white {
         margin-bottom:260px !important;
+        font-size: large !important;
       }
     }
   }
