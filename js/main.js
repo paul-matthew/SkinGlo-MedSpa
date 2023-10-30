@@ -393,4 +393,118 @@ document.addEventListener("DOMContentLoaded", function() {
   
 	lazyImages.forEach(lazyLoad);
   });
+
+
+
+  //PRODUCT SEARCHBAR
+
+document.addEventListener("DOMContentLoaded", function() {
+	if (window.location.pathname.endsWith("/products.html")) {
+		const products = [
+			"ALEX HERBAL SUPER LOTION 200ML",
+			"ALEX VITAMIN CREAM 50ML",
+			"ALEX CLEAR CREAM 50ML",
+			"ALEX COSMETICS BB CREAM (NUDE) 30ML",
+			"ALEX COSMETICS BB (MEDIUM) CREAM 30ML",
+			"ALEX - TOTAL CREAM 30ML",
+			"ALEX INSTANT RELIEF GEL MASK 50ML",
+			"ALEX GREEN TONIC 200ML",
+			"ALEX GREEN TONIC 99ML",
+			"ALEX COSMETIC STEM CELL CREAM 50ML",
+			"Alex Natural Corrector # 3 +Vitamin C 50 ml",
+			"Alex Total Calm Cream 30 ml",
+			"Bioline Energy Lotion Refreshing 200ml",
+			"Bioline Energy Lotion Refreshing 200ml",
+			"Bioline LC Eye-Lip Cream Filling Lifting 30ml",
+			"Bioline LC Filler Serum Hyaluronic Acid 30ml",
+			"Bioline LC Moisturizing Cream 50ml",
+			"Bioline LC Nourishing Cream Filling Effect 50ml",
+			"Bioline Lifting Code Diffusion Filler - Sublime Lift Serum Oil 30ml",
+			"Bioline Lifting Code Hyalu (Boost 5) Concentrate Serum 30ml",
+			"Alex Intensive Corrector No. 1 30ml",
+			"Alex Intensive Corrector No. 2 Cream 30ml",
+			"Alex Natural Corrector # 3 +Vitamin C 50 ml",
+			"Alex No Needle Botanical Lifter 30ml",
+			"Alex Inside Out Skin Perfector 30ml",
+			"Alex 15%C Energizing Booster 30ml"
+		  ];
+		  
+	  const productSearchInput = document.getElementById("productSearch");
+	  const suggestionListpro = document.getElementById("suggestionListpro");
+	  const allProductCards = document.querySelectorAll(".card-container");
   
+	  document.addEventListener("click", function(event) {
+		if (event.target !== productSearchInput) {
+		  suggestionListpro.style.display = "none";
+		}
+	  });
+  
+	  document.addEventListener("keydown", function(event) {
+		if (event.key === "Escape") {
+		  suggestionListpro.style.display = "none";
+		}
+	  });
+  
+	  productSearchInput.addEventListener("input", function() {
+		const inputValuepro = productSearchInput.value.toLowerCase();
+		suggestionListpro.innerHTML = "";
+  
+		const matchingProducts = products.filter(product =>
+		  product.toLowerCase().includes(inputValuepro)
+		);
+  
+		allProductCards.forEach(card => {
+		  const cardTitleElement = card.querySelector(".card-title2");
+		  if (cardTitleElement !== null) {
+			const cardTitle = cardTitleElement.textContent.toLowerCase();
+			if (
+			  inputValuepro === "" ||
+			  matchingProducts.some(product =>
+				cardTitle.includes(product.toLowerCase())
+			  )
+			) {
+			  card.style.display = "block";
+			} else {
+			  card.style.display = "none";
+			}
+		  } else {
+			console.error("Card title element not found");
+		  }
+		});
+  
+		matchingProducts.forEach(product => {
+		  const listItempro = document.createElement("li");
+		  listItempro.textContent = product;
+		  listItempro.addEventListener("click", function() {
+			productSearchInput.value = product;
+			showProductCard(product);
+		  });
+		  suggestionListpro.appendChild(listItempro);
+		});
+  
+		suggestionListpro.style.display = matchingProducts.length > 0 ? "block" : "none";
+	  });
+  
+	  function showProductCard(productName) {
+		const productCardContainer = document.getElementById("productCardContainer");
+		productCardContainer.innerHTML = ""; // Clear existing content
+  
+		allProductCards.forEach(card => {
+		  const cardTitleElement = card.querySelector(".card-title2");
+		  if (cardTitleElement !== null) {
+			const cardTitle = cardTitleElement.textContent.toLowerCase();
+			if (cardTitle.includes(productName.toLowerCase())) {
+			  card.style.display = "block";
+			  productCardContainer.appendChild(card); // Show the selected product card
+			  productCardContainer.style.display = "block";
+			  card.classList.add("center-horizontal"); 
+			} else {
+			  card.style.display = "none";
+			}
+		  } else {
+			console.error("Card title element not found");
+		  }
+		});
+	  }
+	}
+  });

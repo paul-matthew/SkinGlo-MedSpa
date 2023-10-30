@@ -3675,6 +3675,14 @@ textarea.form-control-lg {
   .card-title{
     font-size:15px;
   }
+  .card-title2{
+    font-size:12px;
+  }
+}
+@media (min-width:991px){
+  .card-title2{
+    font-size:18px;
+  }
 }
 
 .card {
@@ -3718,7 +3726,7 @@ textarea.form-control-lg {
   padding: 1rem 1rem;
   background-color:white; }
 
-.card-title {
+.card-title,.card-title2 {
   margin-bottom: 0.5rem;
   color:black;
 }
@@ -10733,10 +10741,9 @@ textarea.form-control {
   margin: 0 auto;
   padding-top: 20px;
   padding-bottom: 50px;
-
 }
 
-#serviceSearch {
+#serviceSearch, #productSearch {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
