@@ -8992,7 +8992,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
         content: '';
         z-index: -1;
         background: white;
-        opacity: 0.5; /*Alter this to 0.5 for an overlay background image*/
+        opacity: 0; /*Alter this to 0.5 for an overlay background image*/
         width: 100%; }
         @media (max-width: 575.98px) {
           .slider-hero .work .img:after {
