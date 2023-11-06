@@ -3684,6 +3684,9 @@ textarea.form-control-lg {
     font-size:18px;
   }
 }
+.card-title{
+  font-size:15px;
+}
 
 .card {
   position: relative;
@@ -3695,12 +3698,12 @@ textarea.form-control-lg {
   -ms-flex-direction: column;
   flex-direction: column;
   min-width: 0;
-  max-height:35vh;
+  max-height:25vh;
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 3px solid black;
-  border-radius: 0.25rem; }
+  /* border: 3px solid red; */ /*To remove the card borders*/
+  border-radius: 20px; }
   .card > hr {
     margin-right: 0;
     margin-left: 0; }
@@ -4680,6 +4683,11 @@ textarea.form-control-lg {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   padding: 1rem; }
+
+  .modal-body img{
+    border-radius: 20px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.12), 0 1px 4px rgba(0,0,0,0.24);
+  }
 
 .modal-footer {
   display: -webkit-box;
@@ -9082,10 +9090,17 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
       font-size:xx-large;
     }
   }
+  @media (min-width:947px) {  
+    .slider-hero .intro{
+      height:50px;
+      bottom:400px;
+      font-size:xx-large;
+    }
+  }
   @media (min-width:992px) {  
     .slider-hero .intro{
       height:50px;
-      bottom:200px;
+      bottom:210px;
       font-size:xx-large;
     }
   }
@@ -9206,8 +9221,26 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
   }
   @media (min-width:761px){
     .btn.btn-white {
-      margin-bottom:620px !important;
-      font-size: xx-large !important;
+      margin-bottom:350px !important;
+      font-size: x-large !important;
+    }
+  }
+  @media (min-width:767px){
+    .btn.btn-white {
+      margin-bottom:350px !important;
+      font-size: x-large !important;
+    }
+  }
+  @media (width:767px){
+    .btn.btn-white {
+      margin-bottom:250px !important;
+      font-size: large !important;
+    }
+  }
+  @media (min-width:768px){
+    .btn.btn-white {
+      margin-bottom:250px !important;
+      font-size: large !important;
     }
   }
   @media (min-width: 1000px) {
@@ -10661,7 +10694,8 @@ textarea.form-control {
 
 .card-img-top {
   object-fit: cover; /* Ensure the image covers the entire card */
-  height: 70%; /* Make sure the image takes up the full card height */
+  height: 50%; /* Make sure the image takes up the full card height */
+  width:100%;
 }
 
 .service-info {
