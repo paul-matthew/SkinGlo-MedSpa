@@ -3298,6 +3298,12 @@ textarea.form-control-lg {
     pointer-events: none;
     cursor: default; }
 
+@media(max-width:1074px){
+  .nav-contact{
+    display:none;
+  }
+}
+
 .nav-tabs {
   border-bottom: 1px solid #dee2e6; }
   .nav-tabs .nav-link {
@@ -3511,7 +3517,7 @@ textarea.form-control-lg {
     flex-wrap: nowrap;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
-    justify-content: flex-start; }
+    justify-content:center; }/*TO GET NAV LINKS TO CENTRE*/
     .navbar-expand-lg .navbar-nav {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
@@ -3659,6 +3665,17 @@ textarea.form-control-lg {
   .navbar-dark .navbar-text a:hover,
   .navbar-dark .navbar-text a:focus {
     color: #fff; }
+
+@media (min-width: 1000px) {
+  .navbar-nav {
+    flex-grow: 1;
+    justify-content: center; /* Align links to the center */
+  }
+
+  .navbar-brand {
+    flex: 0 0 auto; /* The image will stick to the left */
+  }
+}
 
 .center-horizontal{
   margin:0 auto;
@@ -6134,8 +6151,8 @@ textarea.form-control-lg {
 .ms-5 {
   margin-left: 3rem !important; }
 
-.ms-auto {
-  margin-left: auto !important; }
+/* .ms-auto {
+  margin-right: auto !important; } */  
 
 .p-0 {
   padding: 0 !important; }
@@ -8771,7 +8788,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
 .ftco-navbar-light {
   background: white !important;
   position: absolute;
-  top: 44px;
+  top: 0px;
   left: 0;
   right: 0;
   z-index: 3;
