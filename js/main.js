@@ -422,7 +422,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			"Bioline Lifting Code Hyalu (Boost 5) Concentrate Serum 30ml",
 			"Alex Intensive Corrector No. 1 30ml",
 			"Alex Intensive Corrector No. 2 Cream 30ml",
-			"Alex Natural Corrector # 3 +Vitamin C 50 ml",
 			"Alex No Needle Botanical Lifter 30ml",
 			"Alex Inside Out Skin Perfector 30ml",
 			"Alex 15%C Energizing Booster 30ml"
