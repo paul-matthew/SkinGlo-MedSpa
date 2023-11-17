@@ -3681,31 +3681,77 @@ textarea.form-control-lg {
   margin:0 auto;
 }
 
-.card-container{
+/* .card-container{
   max-height:45vh;
-}
-@media (max-width:767px){
+} */
+@media (max-width:500px){
+  @media(min-height:600px){
   .card-container{
-    max-height:45vh;
+    height:280px;
     max-width:50vw;
   }
+  .card{
+    min-height:250px;
+  }
+
   .card-title{
     font-size:15px;
   }
   .card-title2{
     font-size:12px;
   }
+}}
+
+/*PRODUCT - SPECIFIC CONFIGURATION*/
+@media (min-width:500px){
+  @media(max-height:1000px){
+.card-container{
+  min-height:300px;
+  margin-bottom:10px;
+  max-width:50vw;
 }
-@media (min-width:991px){
-  .card-title2{
-    font-size:18px;
+  .card{
+  min-height:300px;
+}
+.card-img-top{
+  max-height:250px;
+}
+.card-body{
+  min-height:900px;
+}
+.service-info,.card-title2{
+  height:900px;
+  font-size:12px;
+}
   }
 }
-.card-title{
-  font-size:15px;
+
+/*PRODUCT - SPECIFIC CONFIGURATION*/
+@media (max-width:1000px){
+  @media(min-height:1000px){
+.card-container{
+  min-height:300px;
+  margin-bottom:10px;
+}
+  .card{
+  min-height:300px;
+}
+.card-img-top{
+  max-height:250px;
+}
+.card-body{
+  min-height:900px;
+}
+.service-info,.card-title2{
+  height:900px;
+}
+  }
 }
 
+
 .card {
+  box-shadow: 0 1px 6px rgba(0,0,0,0.12), 0 1px 4px rgba(0,0,0,0.24);
+  overflow:hidden;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3715,7 +3761,7 @@ textarea.form-control-lg {
   -ms-flex-direction: column;
   flex-direction: column;
   min-width: 0;
-  max-height:25vh;
+  max-height:150px;
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
@@ -3749,6 +3795,8 @@ textarea.form-control-lg {
 .card-title,.card-title2 {
   margin-bottom: 0.5rem;
   color:black;
+  max-height:50px;
+  
 }
 
 .price {
@@ -10709,19 +10757,14 @@ textarea.form-control {
   }
   } */
 
-.card {
-  height: 60vh; /* Set a fixed height for all cards */
-  box-shadow: 0 1px 6px rgba(0,0,0,0.12), 0 1px 4px rgba(0,0,0,0.24);
-  overflow:hidden;
-}
-
 .card-img-top {
   object-fit: cover; /* Ensure the image covers the entire card */
-  height: 50%; /* Make sure the image takes up the full card height */
+  height: 90%; /* Make sure the image takes up the full card height */
   width:100%;
 }
 
 .service-info {
+  max-height:50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
