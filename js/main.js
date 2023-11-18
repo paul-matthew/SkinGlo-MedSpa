@@ -9,47 +9,22 @@
 
 	var slider = function(){
 
-		var slider = document.querySelector('.hero-slider');
+		var heroSlider = document.querySelectorAll('.hero-slider');
 
-		slider.addEventListener('touchstart', function(e) {
-			var touch = e.touches[0];
-			var event = new TouchEvent('touchstart', {
-				touches: [touch],
-				targetTouches: [touch],
-				changedTouches: [touch],
-				bubbles: true,
-				cancelable: true,
-				composed: true
+		if ( heroSlider.length > 0 ) {
+			var heroSlider = tns({
+				container: '.hero-slider',
+				items: 1,
+				mode: 'carousel',
+				autoplay: true,
+			  animateIn: 'tns-fadeIn',
+		    animateOut: 'tns-fadeOut',
+				speed: 700,
+				nav: true,
+				controls: false,
+				autoplayButtonOutput: false,
 			});
-			slider.dispatchEvent(event);
-		});
-		
-		slider.addEventListener('touchmove', function(e) {
-			var touch = e.touches[0];
-			var event = new TouchEvent('touchmove', {
-				touches: [touch],
-				targetTouches: [touch],
-				changedTouches: [touch],
-				bubbles: true,
-				cancelable: true,
-				composed: true
-			});
-			slider.dispatchEvent(event);
-		});
-		
-		slider.addEventListener('touchend', function(e) {
-			var touch = e.touches[0];
-			var event = new TouchEvent('touchend', {
-				touches: [touch],
-				targetTouches: [touch],
-				changedTouches: [touch],
-				bubbles: true,
-				cancelable: true,
-				composed: true
-			});
-			slider.dispatchEvent(event);
-		});
-		
+		}
 
 		var carouselCourses = document.querySelectorAll('.carousel-courses');
 		if ( carouselCourses.length > 0 ) {
