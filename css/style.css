@@ -9063,9 +9063,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
   .slider-hero .tns-nav { top: 210px; }
   .home-btn { top: 150px; display: flex; }
   .home-btn{font-size:5vw !important}
-  .slider-hero .work .slide1 {background-image: url(/images/homeslide4b.jpg); }
-  .slider-hero .work .slide2 {background-image: url(/images/homeslide2b.jpg); }
-  .slider-hero .work .slide3 {background-image: url(/images/homeslide1b.jpg); }
+  .slider-hero .work .slide1 {background-image: url(/images/homeslide4b-g.jpg);}
+  .slider-hero .work .slide2 {background-image: url(/images/homeslide2b-g.jpg)}
+  .slider-hero .work .slide3 {background-image: url(/images/homeslide1b-g.jpg)}
 }
 
 /* Apply these styles when the aspect ratio is greater than 2/1 (width is larger than height) */
@@ -9180,14 +9180,23 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
     left: 0;
     right: 0;
     z-index: 99; }
-
+@media(max-aspect-ratio: 1){
+  .slider-hero .tns-nav > [aria-controls] {
+    background: white;
+}
+}
+@media(min-aspect-ratio: 1){
+  .slider-hero .tns-nav > [aria-controls] {
+    background: gainsboro;
+}
+}
   .slider-hero .tns-nav > [aria-controls] {
     width: 10px;
     height: 10px;
     padding: 0;
     margin: 0 5px;
     border-radius: 50%;
-    background: gainsboro;
+    /* background: gainsboro; */
     border: 0; }
   .slider-hero .tns-outer [aria-controls], .slider-hero .tns-outer [data-action] {
     cursor: pointer; }
@@ -9201,7 +9210,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
     margin: 0 auto;
   }
   .slider-hero .intro{
-    color:whitesmoke;
+    color:white;
     left:0;
     right:0;
     text-align: center;
@@ -9344,7 +9353,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
         color: #fff !important; }
   .btn.btn-white {
     background: black !important;
-    border: 3px solid #ccc !important; /* Light grey border */
+    border: 3px solid white !important; /* Light grey border */
     color: white !important;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   } /* White box shadow */
