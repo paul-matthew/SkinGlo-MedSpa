@@ -9063,9 +9063,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
   .slider-hero .tns-nav { top: 210px; }
   .home-btn { top: 150px; display: flex; }
   .home-btn{font-size:5vw !important}
-  .slider-hero .work .slide1 {background-image: url(/images/homeslide4b-g.jpg);}
-  .slider-hero .work .slide2 {background-image: url(/images/homeslide2b-g.jpg)}
-  .slider-hero .work .slide3 {background-image: url(/images/homeslide1b-g.jpg)}
+  .slider-hero .work .slide1 {background-image: url(/images/homeslide4b.jpg);}
+  .slider-hero .work .slide2 {background-image: url(/images/homeslide2b.jpg)}
+  .slider-hero .work .slide3 {background-image: url(/images/homeslide1b.jpg)}
 }
 
 /* Apply these styles when the aspect ratio is greater than 2/1 (width is larger than height) */
@@ -9105,6 +9105,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
   @media (min-width: 1000px) and (min-aspect-ratio: 1){
       .intro { display: none; }
       .home-btn { display: none; }
+      .home-alt-btn {display:flex !important;}
       .slider-hero .tns-nav { bottom: 0px !important}
       .slider-hero .work .slide1 { margin-top: 100px; height: 55vh !important; filter: grayscale(0%);}
       .slider-hero .work .slide2 { margin-top: 100px; height: 55vh !important; filter: grayscale(0%);}
@@ -10882,6 +10883,10 @@ textarea.form-control {
   font-size: 26px;
 }
 
+.home-alt-btn-container {
+  text-align: center !important;
+}
+
 .home-btn{
   position:absolute;
   left:0;
@@ -10891,3 +10896,15 @@ textarea.form-control {
   justify-content: center;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5) !important}
+
+  .home-alt-btn{
+    max-width:200px;
+    margin:0 auto;
+    margin-top:50px;
+    font-size: large !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5) !important}
+  
+  .home-alt-btn:hover{
+    border:solid black !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5) !important
+  }
