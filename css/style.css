@@ -9078,7 +9078,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
 }
 
   @media (min-width: 500px) and (max-aspect-ratio: 1){
-      .home-btn { top: 150px; display: flex; }
+      .home-btn { top: 250px; display: flex; }
       .slider-hero .tns-nav { top: 26%; }
       .slider-hero .work .slide1 { height: 100vh !important; filter: grayscale(0%)}
       .slider-hero .work .slide2 { height: 100vh !important; filter: grayscale(0%)}
@@ -9095,11 +9095,11 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
   
   @media (min-width: 501px) and (max-height: 1000px){
     .intro { display: none; }
-    .home-btn { display: none; }
+    /* .home-btn { display: none; } */
     /* .slider-hero .tns-nav { top: 230px; } */
-    .slider-hero .work .slide1 { height: 60vh !important; filter: grayscale(0%)}
-    .slider-hero .work .slide2 { height: 60vh !important; filter: grayscale(0%)}
-    .slider-hero .work .slide3 { height: 60vh !important; filter: grayscale(0%)}
+    .slider-hero .work .slide1 { height: 100vh !important; filter: grayscale(0%)}
+    .slider-hero .work .slide2 { height: 100vh !important; filter: grayscale(0%)}
+    .slider-hero .work .slide3 { height: 100vh !important; filter: grayscale(0%)}
 }
 
   @media (min-width: 1000px) and (min-aspect-ratio: 1){
@@ -9183,7 +9183,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
     z-index: 99; }
 @media(max-aspect-ratio: 1){
   .slider-hero .tns-nav > [aria-controls] {
-    background: white;
+    background: gray;
 }
 }
 @media(min-aspect-ratio: 1){
@@ -9211,16 +9211,25 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
     margin: 0 auto;
   }
   .slider-hero .intro{
+    max-width: 500px;
     color:white;
     left:0;
     right:0;
     text-align: center;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 4px 4px rgba(1, 1, 1, 0.9);
     /* background-color: rgba(0, 0, 0, 0.1); */
     min-height:110px;
     display: flex;
     align-items: center; 
     justify-content: center;
+  }
+  .slide1 .intro{
+    max-width: 400px;
+  }
+  @media (max-width:400px){
+    .slide1 .intro{
+      max-width: 100px;
+    }
   }
 
   @media (max-width:300px) {  
