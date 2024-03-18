@@ -9059,7 +9059,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
     width: 100%; }
   
  /* Apply these styles when the aspect ratio is less than or equal to 2/1 */
-@media (max-aspect-ratio: 1) {/*ie. PORTRAIT*/
+@media (max-aspect-ratio: 1.3) {/*ie. PORTRAIT*/
   .slider-hero .tns-nav { top: 210px; }
   .home-btn { top: 150px; display: flex; }
   .home-btn{font-size:5vw !important}
@@ -9069,7 +9069,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
 }
 
 /* Apply these styles when the aspect ratio is greater than 2/1 (width is larger than height) */
-@media (min-aspect-ratio: 1) {/*LANDSCAPE*/
+@media (min-aspect-ratio: 1.3) {/*LANDSCAPE*/
   .intro{display:none !important}
   .slider-hero .tns-nav { bottom: 0px; }
   .slider-hero .work .slide1 {background-image: url(/images/homeslide1.jpeg); }
@@ -9086,7 +9086,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
   }
   @media  (min-width:500px) and (min-height: 700px) and (max-aspect-ratio: 1) {
     .home-btn { top: 150px; display: flex; }
-    .slider-hero{margin-top:100px}
+    .slider-hero{margin-top:10px}
     .slider-hero .tns-nav { top: 36%; }
     .slider-hero .work .slide1 { height: 100vh !important; filter: grayscale(0%)}
     .slider-hero .work .slide2 { height: 100vh !important; filter: grayscale(0%)}
@@ -9228,7 +9228,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
   }
   @media (max-width:400px){
     .slide1 .intro{
-      max-width: 100px;
+      max-width: 70px;
     }
   }
 
