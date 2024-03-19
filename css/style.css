@@ -9226,8 +9226,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
   .slide1 .intro{
     max-width: 400px;
   }
-  @media (max-width:400px){
+  @media (max-width:700px){
     .slide1 .intro{
+      font-size: 20px !important;
       max-width: 70px;
     }
   }
