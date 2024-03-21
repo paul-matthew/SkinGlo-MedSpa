@@ -287,7 +287,13 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Skin Tags Removal Consultation",
 		"C (Corrective Peel)",
 		"Celluma for Anti aging",
-		"Celluma Add-on for Acne"
+		"Celluma Add-on for Acne",
+		"Skin Glo Facial",
+		"Deep pore detox facial *with extraction",
+		"Acne Facial",
+		"Radio Frequency, RF Skin-Tightening for face",
+		"Hydrabrasion for Deep Cleaning and Facial Skin-Tightening",
+		"Hydrabrasion, Skin-Tightening and LED Mask",
 		// Add more services as needed
 	  ];
 	  const serviceSearchInput = document.getElementById("serviceSearch");
