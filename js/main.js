@@ -286,15 +286,20 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Herbal B Peel + Facial",
 		"Skin Tags Removal Consultation",
 		"C (Corrective Peel)",
-		"Celluma for Anti aging",
+		"Celluma LED Light Therapy",
 		"Celluma Add-on for Acne",
-		"Skin Glo Facial",
+		"Skin Glo Signature Facial",
 		"Deep pore detox facial *with extraction",
 		"Acne Facial",
 		"Radio Frequency, RF Skin-Tightening for face",
 		"Hydrabrasion for Deep Cleaning and Facial Skin-Tightening",
 		"Hydrabrasion, Skin-Tightening and LED Mask",
 		// Add more services as needed
+		"Neck & shoulder massage",
+		"Head & scalp massage",
+		"Follow up facial (C peel)",
+		"Teen facial",
+		"Nano Infusion Stem Cell Facial Therapy",
 	  ];
 	  const serviceSearchInput = document.getElementById("serviceSearch");
 	  const suggestionList = document.getElementById("suggestionList");
