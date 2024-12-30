@@ -300,6 +300,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Follow up facial (C peel)",
 		"Teen facial",
 		"Nano Infusion Stem Cell Facial Therapy",
+		"Chemical Peel"
 	  ];
 	  const serviceSearchInput = document.getElementById("serviceSearch");
 	  const suggestionList = document.getElementById("suggestionList");
